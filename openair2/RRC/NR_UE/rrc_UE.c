@@ -568,6 +568,12 @@ static int nr_decode_SI(NR_UE_RRC_SI_INFO *SI_info, NR_SystemInformation_t *si)
         memcpy(SI_info->sib12, typeandinfo->choice.sib14_v1610, sizeof(NR_SIB14_r16_t));
         SI_info->sib14_timer = 0;
         break;
+      case NR_SystemInformation_IEs__sib_TypeAndInfo__Member_PR_sib19_v1700:
+        if(!SI_info->sib19)
+          SI_info->sib19 = calloc(1, sizeof(*SI_info->sib19));
+        memcpy(SI_info->sib19, typeandinfo->choice.sib19_v1700, sizeof(NR_SIB19_r17_t));
+        SI_info->sib19_timer = 0;
+	break;
       default:
         break;
     }
