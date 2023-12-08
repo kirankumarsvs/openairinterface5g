@@ -142,6 +142,8 @@ typedef struct UE_RRC_SI_INFO_NR_s {
   int sib13_timer;
   NR_SIB14_r16_t *sib14;
   int sib14_timer;
+  NR_SIB19_r17_t *sib19;
+  int sib19_timer;
 } __attribute__ ((__packed__)) NR_UE_RRC_SI_INFO;
 
 typedef struct NR_UE_Timers_Constants_s {
@@ -171,6 +173,7 @@ typedef struct NR_UE_Timers_Constants_s {
   uint32_t T310_k;
   uint32_t T311_k;
   uint32_t T319_k;
+  uint32_t T340_k;
 } NR_UE_Timers_Constants_t;
 
 typedef enum {
